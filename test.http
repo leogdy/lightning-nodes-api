@@ -1,0 +1,8 @@
+GET http://localhost:8080/nodes
+
+Purpose: Fetches a list of formatted Lightning Network nodes from the database.
+Expected behavior: Returns a JSON array of node data. If no data is available (e.g., initial import failed), it may return an empty array `[]`.
+
+To test:
+    curl http://localhost:8080/nodes
+    (Add `| jq .` if you have `jq` installed, for pretty-printed JSON output)

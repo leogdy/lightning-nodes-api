@@ -1,0 +1,33 @@
+[package]
+name = "lightning-nodes-api"
+version = "0.1.0"
+edition = "2021"
+description = "A Rust service that periodically imports Lightning Network node metrics and exposes them via a JSON HTTP API."
+license = "MIT"
+repository = "https://github.com/yourusername/lightning-nodes-api"
+
+[dependencies]
+actix-web = "4"
+sqlx = { version = "0.7", features = ["runtime-tokio-native-tls", "sqlite"] }
+tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+dotenv = "0.15"
+log = "0.4"
+env_logger = "0.10"
+chrono = { version = "0.4", features = ["serde"] }
+anyhow = "1.0"
+reqwest = { version = "0.11", features = ["json"] }
+
+[dev-dependencies]
+actix-rt = "2"
+tokio-test = "0.4"
+
+[[bin]]
+name = "lightning-nodes-api"
+path = "src/main.rs"
+
+[[test]]
+name = "integration_test"
+path = "tests/integration_test.rs"
+harness = true
