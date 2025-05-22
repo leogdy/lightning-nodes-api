@@ -25,7 +25,7 @@ A **Rust-based** REST API to fetch, store, and expose public metrics from **Ligh
 1️⃣ **Clone the repository:**
 
 ```bash
-git clone https://github.com/yourusername/lightning-nodes-api.git
+git clone https://github.com/leogdy/lightning-nodes-api.git
 cd lightning-nodes-api
 ```
 
